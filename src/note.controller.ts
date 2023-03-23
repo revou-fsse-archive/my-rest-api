@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Put, Patch, Delete, Param, Body, NotFoundException } from '@nestjs/common';
 import { NoteInput } from './dto/note.dto'
 
-@Controller('note')
+@Controller('notes')
 export class NoteController {
   constructor() {
     if (!global.notes) {
@@ -10,7 +10,7 @@ export class NoteController {
   }
 
   @Get()
-  getAllNote(): Array<Object> {
+  getAllNotes(): Array<Object> {
     return global.notes;
   }
 
