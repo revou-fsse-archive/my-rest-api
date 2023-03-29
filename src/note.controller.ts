@@ -34,8 +34,8 @@ export class NoteController {
     let newNote = {
       id: lastId + 1,
       message: input.message,
-      user_id: input.user_id,
-      created_at: Date.now()
+      userId: input.userId,
+      createdAt: Date.now()
     };
 
     global.notes.push(newNote)
@@ -70,8 +70,8 @@ export class NoteController {
     global.notes[index] = {
       id: note.id,
       message: input.message,
-      user_id: input.user_id,
-      created_at: note.id
+      userId: input.userId,
+      createdAt: note.createdAt
     };
 
     return global.notes[index];
@@ -90,8 +90,8 @@ export class NoteController {
     global.notes[index] = {
       id: note.id,
       message: input.message || note.message,
-      user_id: input.user_id || note.user_id,
-      created_at: note.id
+      userId: input.userId || note.userId,
+      createdAt: note.createdAt
     };
 
 
@@ -103,14 +103,14 @@ export class NoteController {
       {
         id: 1,
         message: 'This is a hectic day',
-        user_id: 10,
-        created_at: 1678261472
+        userId: 10,
+        createdAt: 1678261472
       },
       {
         id: 2,
         message: 'I met my old friend today',
-        user_id: 11,
-        created_at: 1678281466
+        userId: 11,
+        createdAt: 1678281466
       }
     ];
   }
