@@ -4,7 +4,7 @@ The service is built on Node JS, using Nest JS framework.
 
 # Live URL
 
-To access the live URL API endpoint, visit: https://my-rest-api-production-8be2.up.railway.app/note
+To access the live URL API endpoint, visit: https://revou-my-rest-api.up.railway.app/
 
 # Development
 
