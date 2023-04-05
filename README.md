@@ -1,6 +1,6 @@
 This is a simple REST API service for example of assignment week-12 of Revou FSSE course.
 
-The service is built on Node JS, using Nest JS framework.
+The service is built on Node.js, using NestJS framework.
 
 # Live API URL
 
@@ -12,7 +12,7 @@ To run the app on your local environment:
 
 ## Prerequisite
 
-Make sure that you have Node JS version >= 16 and NPM installed on your system
+Make sure that you have Node.js version >= 16 and NPM installed on your system
 
 ## Install dependencies
 
