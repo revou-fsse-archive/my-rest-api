@@ -30,12 +30,14 @@ export class NoteController {
   @Post()
   createNote(@Body() input: NoteInput): Object {
     let lastId = global.notes[global.notes.length - 1]['id'];
+    let currentTs = this.currentTimeInSecond()
 
     let newNote = {
       id: lastId + 1,
       message: input.message,
       userId: input.userId,
-      createdAt: Date.now()
+      createdAt: currentTs,
+      updatedAt: currentTs
     };
 
     global.notes.push(newNote)
@@ -71,7 +73,8 @@ export class NoteController {
       id: note.id,
       message: input.message,
       userId: input.userId,
-      createdAt: note.createdAt
+      createdAt: note.createdAt,
+      updatedAt: this.currentTimeInSecond()
     };
 
     return global.notes[index];
@@ -91,7 +94,8 @@ export class NoteController {
       id: note.id,
       message: input.message || note.message,
       userId: input.userId || note.userId,
-      createdAt: note.createdAt
+      createdAt: note.createdAt,
+      updatedAt: this.currentTimeInSecond()
     };
 
 
@@ -104,14 +108,20 @@ export class NoteController {
         id: 1,
         message: 'This is a hectic day',
         userId: 10,
-        createdAt: 1678261472
+        createdAt: 1678261472,
+        updatedAt: 1678261472
       },
       {
         id: 2,
         message: 'I met my old friend today',
         userId: 11,
-        createdAt: 1678281466
+        createdAt: 1678281466,
+        updatedAt: 1678281466
       }
     ];
+  }
+
+  currentTimeInSecond() {
+    return Math.floor(Date.now() / 1000)
   }
 }
