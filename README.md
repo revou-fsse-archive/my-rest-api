@@ -2,9 +2,9 @@ This is a simple REST API service for example of assignment week-12 of Revou FSS
 
 The service is built on Node JS, using Nest JS framework.
 
-# Live URL
+# Live API URL
 
-To access the live URL API endpoint, visit: https://revou-my-rest-api.up.railway.app/
+To access the live URL API endpoint, visit: https://revou-rest-api.4rif.in/
 
 # Development
 
