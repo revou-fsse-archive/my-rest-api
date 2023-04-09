@@ -1,4 +1,5 @@
 export class NoteInput {
-  message: string;
+  title: string;
+  body: string;
   userId: string;
 }

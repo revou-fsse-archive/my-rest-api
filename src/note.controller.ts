@@ -34,7 +34,8 @@ export class NoteController {
 
     let newNote = {
       id: lastId + 1,
-      message: input.message,
+      title: input.title,
+      body: input.body,
       userId: input.userId,
       createdAt: currentTs,
       updatedAt: currentTs
@@ -71,7 +72,8 @@ export class NoteController {
 
     global.notes[index] = {
       id: note.id,
-      message: input.message,
+      title: input.title,
+      body: input.body,
       userId: input.userId,
       createdAt: note.createdAt,
       updatedAt: this.currentTimeInSecond()
@@ -92,7 +94,8 @@ export class NoteController {
 
     global.notes[index] = {
       id: note.id,
-      message: input.message || note.message,
+      title: input.title || note.title,
+      body: input.body || note.body,
       userId: input.userId || note.userId,
       createdAt: note.createdAt,
       updatedAt: this.currentTimeInSecond()
@@ -106,14 +109,16 @@ export class NoteController {
     global.notes = [
       {
         id: 1,
-        message: 'This is a hectic day',
+        title: 'This is a hectic day',
+        body: 'We release the system with the new framework version. A lot of unexpected things happened',
         userId: 10,
         createdAt: 1678261472,
         updatedAt: 1678261472
       },
       {
         id: 2,
-        message: 'I met my old friend today',
+        title: 'I met my old friend today',
+        body: 'I met Eric when I was having lunch in a cafe. He\'s completely changed.',
         userId: 11,
         createdAt: 1678281466,
         updatedAt: 1678281466
