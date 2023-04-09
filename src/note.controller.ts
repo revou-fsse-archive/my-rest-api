@@ -30,15 +30,15 @@ export class NoteController {
   @Post()
   createNote(@Body() input: NoteInput): Object {
     let lastId = global.notes[global.notes.length - 1]['id'];
-    let currentTs = this.currentTimeInSecond()
+    let now = new Date();
 
     let newNote = {
       id: lastId + 1,
       title: input.title,
       body: input.body,
       userId: input.userId,
-      createdAt: currentTs,
-      updatedAt: currentTs
+      createdAt: now,
+      updatedAt: now
     };
 
     global.notes.push(newNote)
@@ -76,7 +76,7 @@ export class NoteController {
       body: input.body,
       userId: input.userId,
       createdAt: note.createdAt,
-      updatedAt: this.currentTimeInSecond()
+      updatedAt: new Date()
     };
 
     return global.notes[index];
@@ -98,7 +98,7 @@ export class NoteController {
       body: input.body || note.body,
       userId: input.userId || note.userId,
       createdAt: note.createdAt,
-      updatedAt: this.currentTimeInSecond()
+      updatedAt: new Date()
     };
 
 
@@ -112,21 +112,17 @@ export class NoteController {
         title: 'This is a hectic day',
         body: 'We release the system with the new framework version. A lot of unexpected things happened',
         userId: 10,
-        createdAt: 1678261472,
-        updatedAt: 1678261472
+        createdAt: new Date("2023-04-01T07:10:28.165Z"),
+        updatedAt: new Date("2023-04-01T07:10:28.165Z")
       },
       {
         id: 2,
         title: 'I met my old friend today',
         body: 'I met Eric when I was having lunch in a cafe. He\'s completely changed.',
         userId: 11,
-        createdAt: 1678281466,
-        updatedAt: 1678281466
+        createdAt: new Date("2023-04-01T10:15:01.122Z"),
+        updatedAt: new Date("2023-04-01T10:15:01.122Z")
       }
     ];
-  }
-
-  currentTimeInSecond() {
-    return Math.floor(Date.now() / 1000)
   }
 }
