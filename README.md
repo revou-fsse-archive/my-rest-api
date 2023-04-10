@@ -6,6 +6,16 @@ The service is built on Node.js, using NestJS framework.
 
 To access the live URL API endpoint, visit: https://revou-rest-api.4rif.in/
 
+## API Endpoints
+
+```
+GET   /notes
+GET   /notes/{id}
+POST  /notes
+PUT   /notes/{id}
+PATCH /notes/{id}
+```
+
 # Development
 
 To run the app on your local environment:
