@@ -3,8 +3,6 @@ import { NoteController } from './note.controller';
 
 @Module({
   imports: [],
-  controllers: [
-    NoteController
-  ],
+  controllers: [NoteController],
 })
 export class AppModule {}
