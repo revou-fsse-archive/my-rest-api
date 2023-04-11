@@ -9,6 +9,7 @@ import {
   Body,
   NotFoundException,
 } from '@nestjs/common';
+
 import { NoteInput } from './dto/note.dto';
 
 export type Note = {
@@ -124,7 +125,7 @@ export class NoteController {
 
   // PATCH /notes/:id
   @Patch(':id')
-  patch(@Param('id') id: number, @Body() input: NoteInput) {
+  patch(@Param('id') id: number, @Body() input) {
     const index = this.notes.findIndex((note) => note.id == id);
 
     if (index == -1) {
