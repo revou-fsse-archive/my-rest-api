@@ -22,14 +22,14 @@ To run the app on your local environment:
 
 ## Prerequisite
 
-Make sure that you have Node.js version >= 16 and NPM installed on your system
+Make sure that you have Node.js version >= 16 and PNPM installed on your system
 
 ## Install dependencies
 
 Install the dependencies by running
 
 ```sh
-npm i
+pnpm i
 ```
 
 in the directory of this service
@@ -39,5 +39,5 @@ in the directory of this service
 Run the server in your computer by running:
 
 ```sh
-npm run start
+pnpm start
 ```
