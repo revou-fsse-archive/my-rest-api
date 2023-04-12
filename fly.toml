@@ -1,0 +1,27 @@
+# fly.toml file generated for revou-rest-api-flyio on 2023-04-12T14:16:49+07:00
+
+app = "revou-rest-api-flyio"
+kill_signal = "SIGINT"
+kill_timeout = 5
+primary_region = "sin"
+
+[env]
+  PORT = "3000"
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 3000
+  processes = ["app"]
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+    force_https = true
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
+  [services.concurrency]
+    type = "connections"
+    hard_limit = 25
+    soft_limit = 20

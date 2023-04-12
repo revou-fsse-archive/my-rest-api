@@ -4,7 +4,10 @@ The service is built on Node.js, using NestJS framework.
 
 # Live API URL
 
-To access the live URL API endpoint, visit: https://revou-rest-api.4rif.in/
+To access the live URL API endpoint, visit:
+
+https://revou-rest-api.4rif.in/ (Railway.app)
+https://revou-rest-api-flyio.4rif.in/ (Fly.io)
 
 ## API Endpoints
 
