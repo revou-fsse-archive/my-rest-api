@@ -8,6 +8,7 @@ To access the live URL API endpoint, visit:
 
 https://revou-rest-api.4rif.in/ (Railway.app)
 https://revou-rest-api-flyio.4rif.in/ (Fly.io)
+https://revou-rest-api-rendercom.4rif.in/ (Render.com)
 
 ## API Endpoints
 
